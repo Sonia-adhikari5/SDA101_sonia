@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SDA101 - Simple Tailwind Exercise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          transitionDuration: { 250: '250ms' }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-800">
+
+  <!-- Page container -->
+  <div class="max-w-5xl mx-auto p-6">
+
+    <!-- Header -->
+    <header class="flex items-center justify-between mb-8">
+      <div>
+        <h1 class="text-3xl font-extrabold">SDA101 — Mini Project</h1>
+        <p class="text-sm text-gray-500"> Job listings</p>
+      </div>
+<nav class="hidden sm:flex gap-4 items-center">
+        <a href="#jobs" class="px-3 py-2 rounded-md hover:bg-gray-200 transition">Jobs</a>
+        <a href="#gallery" class="px-3 py-2 rounded-md hover:bg-gray-200 transition">Gallery</a>
+        <a href="#contact" class="px-3 py-2 rounded-md hover:bg-gray-200 transition">Contact</a>
+      </nav>
+ <button class="sm:hidden p-2 rounded-md border" aria-label="menu">☰</button>
+    </header>
+<main class="bg-white shadow-md rounded-lg p-6"></main>
+
+        </button>
+      </section>
+<section id="jobs" class="mb-8">
+        <h3 class="text-xl font-semibold mb-3">1) Job listings (table)</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="px-4 py-2">Job Title</th>
+                <th class="px-4 py-2">Company</th>
+                <th class="px-4 py-2">Location</th>
+                <th class="px-4 py-2">Application Deadline</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t">
+                <td class="px-4 py-2">Frontend Developer</td>
+                <td class="px-4 py-2">Blue Widgets</td>
+                <td class="px-4 py-2">Thimphu, Bhutan</td>
+                <td class="px-4 py-2">2025-11-01</td>
+              </tr>
+              <tr class="border-t bg-white">
+                <td class="px-4 py-2">Data Analyst</td>
+                <td class="px-4 py-2">DataCo</td>
+                <td class="px-4 py-2">Gelephu</td>
+                <td class="px-4 py-2">2025-10-20</td>
+              </tr>
+              <tr class="border-t bg-gray-50">
+                <td class="px-4 py-2">UX Designer</td>
+                <td class="px-4 py-2">DesignLab</td>
+                <td class="px-4 py-2">Punakha</td>
+                <td class="px-4 py-2">2025-12-15</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <button
+          class="px-6 py-3 bg-blue-600 text-white rounded-md shadow-sm transform transition duration-250 hover:scale-105 hover:bg-blue-500 focus:outline-none"
+        >
+          Apply now
+        </button>
+         <section id="gallery" class="mb-8">
+        <h3 class="text-xl font-semibold mb-3">2) Photo gallery (grid)</h3>
+        <!-- responsive grid: 1 col mobile, 2 cols md, 3 cols lg -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- using placeholder images from picsum.photos -->
+          <img src="https://picsum.photos/seed/1/600/400" alt="photo1" class="w-full h-48 object-cover rounded-md shadow-sm hover:scale-105 transform transition" />
+          <img src="https://picsum.photos/seed/2/600/400" alt="photo2" class="w-full h-48 object-cover rounded-md shadow-sm hover:scale-105 transform transition" />
+          <img src="https://picsum.photos/seed/3/600/400" alt="photo3" class="w-full h-48 object-cover rounded-md shadow-sm hover:scale-105 transform transition" />
+          <img src="https://picsum.photos/seed/4/600/400" alt="photo4" class="w-full h-48 object-cover rounded-md shadow-sm hover:scale-105 transform transition" />
+          <img src="https://picsum.photos/seed/5/600/400" alt="photo5" class="w-full h-48 object-cover rounded-md shadow-sm hover:scale-105 transform transition" />
+          <img src="https://picsum.photos/seed/6/600/400" alt="photo6" class="w-full h-48 object-cover rounded-md shadow-sm hover:scale-105 transform transition" />
+        </div>
+      </section>
+      <section id="nav" class="mb-8">
+        <h3 class="text-xl font-semibold mb-3">3) Navigation bar (flex)</h3>
+
+        <nav class="flex items-center justify-between bg-gray-100 p-3 rounded-md">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-indigo-600 text-white flex items-center justify-center rounded-full font-bold">S</div>
+            <span class="font-semibold">CollegeSite</span>
+          </div>
+          <div class="hidden md:flex gap-4">
+            <a class="px-3 py-1 rounded hover:bg-indigo-50 transition" href="#home">Home</a>
+            <a class="px-3 py-1 rounded hover:bg-indigo-50 transition" href="#courses">Courses</a>
+            <a class="px-3 py-1 rounded hover:bg-indigo-50 transition" href="#apply">Apply</a>
+          </div>
+
+          <!-- CTA button with micro interaction -->
+          <a href="#apply" class="ml-4 px-4 py-2 bg-green-600 text-white rounded-md transition transform hover:scale-105">Apply Now</a>
+        </nav>
+      </section>
+
+    </main>
+<footer id="contact" class="mt-6 text-center text-sm text-gray-500">
+      <p>Contact: 02250371.cst@rub.edu.bt / 77841142
+      </p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
